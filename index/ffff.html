@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 2000px;
+        }
+        .nav ul{
+            background-color: blanchedalmond;
+            height: 50px;
+            width: 1158.4px;
+        }
+        .nav ul li{
+            list-style: none;
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            float: left;
+            line-height: 50px;
+        }
+       .top{
+           height: 399.91px;
+           background: no;
+       }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <img src="../img/section_e.jpg" alt="" width="100%">
+    </div>
+    <div class="nav">
+        <ul>
+            <li>首页</li>
+            <li>游戏中心</li>
+            <li>下载中心</li>
+            <li>活动中心</li>
+            <li>关于我们</li>
+        </ul>
+    </div>
+    <div class="footer">
+        <img src="../img/section_g.png" alt="" width="100%">
+    </div>
+</body>
+<script>
+        var nav = document.querySelector('.nav');
+        var tops = document.querySelector('.top');
+        document.addEventListener('scroll',function(){
+            if(document.documentElement.scrollTop>= tops.offsetHeight){
+                nav.style.cssText = "position:fixed;top:0px";
+            }else{
+                nav.style.cssText = "position:relative;";
+            }
+        })
+</script>
+</html>

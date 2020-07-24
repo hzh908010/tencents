@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 1000px;
+            width: 300px;
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+<script>
+    var box = document.querySelector('.box');
+    document.addEventListener('scroll',function(){
+        console.log(window.pageYOffset);
+    })
+</script>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="../js/index.js"></script>
+</head>
+<body>
+    <!-- 顶部部分 -->
+    <div class="head">
+       <div class="head_row_a">
+           <a href="" class="logo_a"></a>
+       </div>
+       <div class="head_row">
+           <div class="form">
+               <div class="search_keywords">
+                 <input type="text"><button>
+                    <i class="fa fa-search"></i>
+                    全网搜
+                </button>
+                <a href="">
+                    <i class="fa fa-fire"></i>
+                    热搜榜
+                </a>
+               </div>
+           </div>
+       </div>
+       <div class="head_row">
+           <div class="head_row_last">
+           <div class="i_logo">
+              <img src="../img/vip-.png" alt="">
+           </div>
+           <div class="i_logo">
+            <img src="../img/倒计时.png" alt="">
+         </div>
+         <div class="i_logo">
+            <img src="../img/上传.png" alt="">
+         </div>
+         <div class="i_logo">
+            <img src="../img/视频下载.png" alt="">
+         </div>
+         <div class="i_logo_last">
+            <img src="../img/姓名 用户名 昵称 (1).png" alt="">
+         </div>
+        </div>
+       </div>
+    </div>
+    <!-- 顶部部分 -->
+
+    <!-- 轮播图部分 -->
+    <div class="banner">
+        <div class="nav" id="nav">
+            <a href="">
+            <span> <h5 class="watch">大家在看</h5></span> 
+            </a>
+            <h3><i class="fa fa-fire"></i>重磅推荐</h3>
+            <h5> <span> <a href="" class="hs_a" >全国两会</a> </span></h5>
+            <h5> <span> <a href="" class="hs_a">幸福触手可及</a> </span> </h5>
+            <h5> <span> <a href="">陈芊芊·独播</a> </span> </h5>
+            <h5> <span> <a href="">创造营2020</a> </span> </h5>
+            <h5> <span> <a href="">让生活好看</a> </span> </h5>
+            <h5> <span> <a href="">脱口秀云海选</a> </span> </h5>
+            <h5> <span> <a href="">正直播PEL</a> </span> </h5>
+            <h5> <span> <a href="">极限挑战</a> </span> </h5>
+            <h5> <span> <a href="">婚宴故事</a> </span> </h5>
+        </div>
+
+        <div class="nav_box">
+            <div class="section" id="section_watch">
+                <div class="watch_banner">
+                <a href=""><img src="../img/wacth_banner_a.jpg" alt=""></a>
+                <a href=""><img src="../img/wacth_banner_b.jpg" alt=""></a>
+                <a href=""><img src="../img/wacth_banner_c.jpg" alt=""></a>
+                <a href=""><img src="../img/wacth_banner_d.jpg" alt=""></a>
+                </div>
+            </div>
+            <div class="section" style="display: block;"><img src="../img/section_a.jpg" alt=""></div>
+            <div class="section"><img src="../img/section_b.jpg" alt=""></div>
+            <div class="section"><img src="../img/section_c.jpg" alt=""></div>
+            <div class="section"><img src="../img/section_d.jpg" alt=""></div>
+            <div class="section"><img src="../img/section_e.jpg" alt=""></div>
+            <div class="section"><img src="../img/section_f.jpg" alt=""></div>
+            <div class="section"><img src="../img/section_g.png" alt=""></div>
+            <div class="section"><img src="../img/section_h.jpg" alt=""></div>
+            <div class="section"><img src="../img/section_i.jpg" alt=""></div>
+        </div>
+    </div>
+     <!-- 轮播图部分 -->
+</body>
+<script>
+    var hs = document.getElementsByTagName('h5');
+    console.log(hs);
+    // var sections = document.
+    var spanss = document.getElementsByTagName('span');
+    // console.log(spanss);
+    var sections = document.querySelectorAll('.section');
+    // console.log(sections);
+    
+
+    for(var i = 0;i<spanss.length;i++){
+        spanss[i].setAttribute('index',i);
+        spanss[i].onmouseenter = function(){
+            
+            var index = this.getAttribute('index');
+            // console.log(index);
+            for(var i= 0 ;i<sections.length;i++) {
+                sections[i].style.display = 'none';
+            }
+            sections[index].style.display = 'block';
+        }
+    }
+</script>
+</html>

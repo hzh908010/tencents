@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            width: 200px;
+            height: 200px;
+            background-color: bisque;
+            display: block;
+            overflow: hidden;
+            background: r;
+        }
+    </style>
+</head>
+<body>
+     <textarea name="" id="">123</textarea>
+     <button>发布</button>
+     <ul>
+
+     </ul>
+</body>
+<script>
+    var textarea = document.querySelector('textarea');
+    var btn = document.querySelector('button');
+    var ul = document.querySelector('ul');
+    btn.onclick = function(){
+        // 创建节点
+        var li = document.createElement('li');
+        // 添加节点
+        // ul.appendChild(li);    最新发布的留言在最下面
+        ul.insertBefore(li,ul.children[0]);   //最新发布的留言在最上面
+        // 将文本域里面的值 赋值给动态生成的li
+        li.innerHTML = textarea.value ;
+        textarea.value = '';
+    }
+</script>
+</html>
